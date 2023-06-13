@@ -1,0 +1,10 @@
+import random
+name_string=input("Enter any string \n")
+names=name_string.split(", ")
+print(names)
+num_items=len(names)
+random_choice=random.randint(0,num_items-1)
+print(random_choice)
+random.randint(0,1)
+# print(name_string)
+# print(name_string[0])
