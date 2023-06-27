@@ -9,3 +9,85 @@ regular uesrs are normal users
 user-->entity which consumes system resources(resources can be cpu,hdd,ram,network)
 system resources means components of server or machine
 types of users in linux:
+  root/admin user/system users(in windows we can call it as admin user and for linux we call it as root user)
+  Regular uesrs
+  Application users
+System users: system users will created alomg with o/s installation
+   example: root/admin user(default while installing o/s)  
+Application user: After installation of o/s we can install additiona softwares or applications(Application level usage users)
+   example: if you install httpd internally apache user will be installed
+Normal uesrs: Normal users are created by O/S admins(System users)
+How to identify users:
+  we can create almost 65k uesrs
+  every usesr has a unique id
+  linux is a command line operating system
+  command:id uers name
+  linux has given range of Uid'S
+  uid=0-99-->system user/admin/root user
+  uid=100-999-->application user
+  uid=1000-65k-->normal users
+  root user id always haviung a id as 0     
+    [root@ip-172-31-28-243 ~]# id root
+uid=0(root) gid=0(root) groups=0(root)
+ Groups:
+  Collection/Set of users with common goal
+Important files for user management:
+  -->user information file
+  -->all main configuration files are stored in /etc(forwad slash is root user)  /etc/passwd  (here user information will be there) 
+  --->group info-->/etc/group
+  -->Password information of the user--->/etc/shadow
+every users has there own home folder
+   root:x:0:0:root:/root:/bin/bash(with the help of root user only the O/S will bootup)
+if iam creating a user this user info will be seen in passwd file
+if you create a user with same name one group will be created
+commands:
+  add user-->adduser username
+  add group-->groupadd groupname  
+/home/user/bin/bash----->/bin/bash means by shell(acts as an program/software which will helps user to interact with underlying operating system)
+  
+Note:if you create a user automatically it creates group
+srujan:!!:19535:0:99999:7:::
+      19535-->uid
+      0-->group id
+      99999-expiration date of the acoount
+      "7": This number represents the number of days before the password can be changed
+      "::": These empty colons (::) represent the fields for the account's minimum password age, maximum password age, and password warning period. Since these fields are empty, it suggests that there are no specific values set for these parameters.
+      Overall, the given string indicates that the "srujan" user account has a locked or disabled password, a UID of 19535, belongs to the "root" group, does not have an expiration date, requires password changes every 7 days, and has no specific values set for the minimum and maximum password ages or password warning period.
+
+  here !! means we can set the password for the user
+  here * means we can't create password means system users
+How to set the password for the user:
+    command-->passwd username  
+    srujan:$6$hwtvW.zQs0PQsMwP$5qndn/1KqtnuQb1EMsB.H9dzMiJL3UXk8RSoeM8EIzgajyYB.0QGRCBvH14PbGZSEkZ/UZ4NG8rPQf3uyoIJ01:19535:0:99999:7:::
+    here $ means 
+    For example, in the given string, the section starting with "$6$" suggests that the password is encrypted using the SHA-512 algorithm. The subsequent section after the second dollar sign ($) contains the salt value, which is used to add complexity to the password encryption process.
+How to create a group:
+  add user to newly created group
+  ** while creating the user add to group command--->useradd -G groupname username
+  ** After creating the user(modifying the user) for existing user--> usermod -a -G groupname username   
+     -a is append
+     -G is group
+  modify group name-->groupmod -n newgroupname old group name  
+  change group id--> groupmod -g <gid> <group name>  
+  Single user to multiple groups--->usermod -aG grp1,grp2,grp3
+  delete user-->userdel srujan
+how to handle user while deleting:
+-->lock the user
+-->All the user work will be stored in /home folder of the user(/home/srujan)  
+-->Take the backup of the user home folder
+-->After remove or delete the user
+
+How to lock user-->usermod -L username
+   sriram:!$6$Oj5Pi7YmLwxTdn48$oMdser7CGMGs3LKO2Nm8UQX6USBm02K/Murv/b5D4SpLbs8.c.9wxR2kBCeSo4iSBQpM0R/aIl7f5QECk62jm.:19535:0:99999:7:::
+  !$ means user account got locked
+userdel usrername  it will remove information from the configuration files only they tring to maintain the home directory
+remove user completely--->userdel -r username--> -r means recursively removes directories
+How to copy or take backup cp /home/sriram/* /tmp
+delete-->userdel sriram
+delete withdata->userdel -r sriram
+How to unlock the user-->usermod -U username
+users file means :. It defines the privileges and permissions granted to users and user groups when using the "sudo" command, which allows users to run commands with administrative (root) privileges.
+The "sudoers" file is located at "/etc/sudoers" and can only be edited by the root user or users with administrative privileges
+how to add users to sudoers file:
+    -->add user to special group called "wheel"
+       so the user will become root user and from there any user can be logged in but eventhouh if you add user to wheel group while logging into the user use sudo before this

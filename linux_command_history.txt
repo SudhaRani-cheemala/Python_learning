@@ -1,0 +1,169 @@
+1  clear
+    2  sudo install terraform
+    3  sudo hostname ssm-agent
+    4  sudo su -
+    5  clear
+    6  cd ..
+    7  cd .
+    8   cd
+    9  cd ..
+   10  cd
+   11  clear
+   12  mkdir dic
+   13  cd dic/
+   14  vi sample.py
+   15  python sample.py
+   16  cd ..
+   17  sudo su -
+   18  clear
+   19  groupadd fpt-india
+   20  usrmod -a -G fpt-india anoohhya
+   21  usermod -a -G fpt-india anoohhya
+   22  cat /etc/passwd
+   23  cat /etc/passwd -ls
+   24  cat /etc/passwd -l
+   25  cat /etc/passwd | wc -l
+   26  cat /etc/shadow
+   27  passwd anoohhya
+   28  cat /etc/shadow
+   29  /etc/passwd
+   30  sudo /etc/passwd
+   31  cat  /etc/passwd
+   32  cat /etc/passwd
+   33  clear
+   34  ls
+   35  cd ..
+   36  ls
+   37  user login
+   38  adduser fpt-dev-1
+   39  groupadd fpt-dev
+   40  sudo usermod -a -G fpt-dev fpt-dev-1
+   41  passwd fpt-dev-1
+   42  cat /etc/shadow
+   43  clear
+   44  su - fpt-dev-1
+   45  id root
+   46  sudo yum install nginx -y
+   47  id nginx
+   48  sudo yum install docker -y
+    50  id docker
+   51  cat /etc/passwd
+   52  cat /etc/group
+   53  id ec2-user
+   54  clear
+   55  cat /etc/passwd
+   56  adduser srujan
+   57  cat /etc/passwd
+   58  cat /etc/group
+   59   cat /etc/shadow
+   60  passwd srujan
+   61  cat /etc/shadow
+   62  history
+   63  groupadd devops-admin
+   64  cat /etc/group
+   65  sudo usermod -G devops-admin srujan
+   66  cat /etc/passwd
+   67  useradd -G devops-admin sriram
+   68  usermod -a -G devops-admin srujan
+   69  usermod -a -G devops-admin nginx
+   70  cat /etc/group
+   71  history
+   72  history>linux_command.txt
+   73  ls
+   74  vi linux_command.txt
+   75  cat /etc/group
+   76  groupmod -n devops-admin-fpt devops-admin
+   77  cat /etc/group
+   78  groupmod -g 2002 devops-admin-fpt
+   79  cat /etc/group
+   80  groupmod -g 2003 devops-admin-fpt
+   81  cat /etc/group
+   82  userdel srujan
+   83  cat /etc/passwd
+   84  whoami
+   85  cd
+   86  ls
+   87  passwd sriram
+   88  cat /etc/passwd
+   89  cat /etc/shadow
+   90  cat /etc/passwd
+   91  su - sriram
+   92  clear
+   93  useradd srujan
+   94  useradd srujan1
+   95  su - sriram
+   96  passwd srujan1
+   97  su - sriram
+   98  usermod -L sriram
+   99  su - sriram
+  100  cat /etc/shadow
+  101  su - sriram
+  102  ll
+  103  su - sriram
+  104  userdel sriram
+  105  cat /etc/passwd
+  106  ls
+  107  cd hello/
+  108  ls
+  109  cd ..
+  110  useradd sriram
+  111  cat /etc/passwd
+  112  userdel -r sriram
+  113  userdel -r srujan
+  114  ls
+  115  exit
+  116  useradd sriram
+  117  userdel -r sriram
+  118  cat /etc/passwd
+  119  cat /etc/shadow
+  120  ls
+  121  userdel sudha
+  122  cat /etc/passwd
+  123  clear
+  124  cat /etc/passwd
+  125  useradd sudha
+  126  userdel -r sudha
+  127  cd ..
+  128  cd \
+  129  clear
+  130  userdel -r sudha
+  131  userdel sudha
+  132  cat /etc/passwd
+   133  useradd sudha
+  134  cat /etc/passwd
+  135  userdel -r sudha
+  136  id srujan
+  137  id sudha
+  138  id sriram
+  139  clear
+  140  cat /etc/passwd
+  141  usermod - L srujan1
+  142  usermod - L srujan1
+  143  clear
+  144  cat /etc/shadow
+  145  cat /etc/passwd
+  146  useradd seetha
+  147  cat /etc/passwd
+  148  cat /etc/group
+  149  cat /etc/shadow
+  150  passwd seetha
+  151  usermod -L seetha
+  152  su - seetha
+  153  ls
+  154  cd
+  155  cd .
+  156  cd ...
+  157  cd ..
+  158  ls
+  159  cd tmp/
+  160  ls
+  161  clear
+  162  cd ..
+  163  cd
+  164  clear
+  165  cat /etc/passwd
+  166  cat /etc/shadow
+  167  usermod -U seetha
+  168  cat /etc/shadow
+
+                              
