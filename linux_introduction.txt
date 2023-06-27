@@ -1,0 +1,11 @@
+linux is an operating system
+operating system which will convert user instruction into machine understandable language or binary language
+linux is a opensource(original source code of the application)
+linux is secured operating system(security in linux is layer base it is in built in o/s)
+firewall similar o security groups in aws
+it has advanced file security
+for windows we call it as 
+regular uesrs are normal users
+user-->entity which consumes system resources(resources can be cpu,hdd,ram,network)
+system resources means components of server or machine
+types of users in linux:
