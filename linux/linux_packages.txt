@@ -2,11 +2,54 @@ what is package in linux:
     collection of various supporting files together 
 How to manage packages in linux:
      package management means-->install,uninstall, update/upgrade, downgrade, patching
+
 types of packages:
 red hat package(rpm):if your o/s is redhat based
 using rpm how to install  
    1).Need to download packages dependencies
    2).install  dependencies
    3).install actual package
-How to download packages:
-        
+ RPM stands for Red Hat Package Manager. It is a free and open-source package management system. The name, RPM, was derived from the .rpm file format. The manager was designed to be used for Linux distributions. Initially, it was made to be used in Red Hat Linux.
+ Yum is usually used with the RHEL family OS’s and handles RPM software packages while apt is used with the Debian family distributions and handles deb software packages.
+ in windows we can call it as software in linux we call it as package
+  - usually a package contains
+    - binaries
+    - libraries
+    - documents
+    - configuration files
+    - scripts
+Two package manager tools
+1).RPM(redhat paxkage manager)
+2).Debian
+
+NOTE: YUM(Yellow dog modifier) and DNF(Dandified Yum) are package management tools
+in production rpm will be used in production specific version is required.
+rpm -q for query if you want to know is in your package specificfile is there or not questioning purpose
+rpm -qa here we can give sub arguments here a is arguments query all packages in the operating system
+rpm -qi before installation we have to know the total information about the package(which version and is this compatible with redhat or not)
+rpm -ql what files are there(query list list out all the packages)
+rpm -qF from which package that command/file is executed
+rpm -ivh <package name>-->to install packages
+rpm -e  --->uninstall packages e is erase
+before removing packages dont remove the dependencies in that case we have to use-->rpm -e --nodeps <package name>
+rpm -qa | wc -l--->list out the number of packages 
+rpm -qa | less --->page by page it will display the packages(after enter this command it will go into search option press "f" for forward,press "b" for backward,press "q" for exit)
+rpm -qf /etc/passwd ---> which gives the file location and which package
+Go to the resource dot file--->copy the link--> go to terminal wget (paste link for package) 
+
+How to get the architecture of operating system:
+  uname -m --->64 bit o/s
+  uname -v---> time stamp will give
+  uname -n ---> name of the server
+  uname -a --> everything it will display
+For automatic process:
+    yum will be used for automatic download and dependencieswith actual packages
+    where we can find the url for automatic update /etc/yum.repositories./.repo files will be there in this location will find files
+    url/mirrors
+    if you don't have any specific version to install go to yum install method
+    yum install httpd  
+    while installing it will ask [y/d/N]
+    y-->yes download and install
+    d-->yes download only no installation
+    N--->No download no installation
+    uninstall package-->sudo yum remove <Package name>

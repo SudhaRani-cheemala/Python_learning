@@ -1,0 +1,37 @@
+ 1  rpm -qa | wc -l
+    2  rpm -qa | less
+    3  clear
+    4  rpm -qi python3-setuptools-wheel-53.0.0-12.el9.noarch
+    5  rpm -ql python3-setuptools-wheel-53.0.0-12.el9.noarch
+    6  rpm -ql | grep nginx
+    7  rpm -qa | grep nginx
+    8  rpm -ql | less
+    9  rpm -qa | less
+   10  clear
+   11  sudo yum install nginx -y
+   12  clear
+   13  rpm -qa | less
+   14  rpm -qf /etc/passwd
+   15  rpm -ivh setup-2.13.7-9.el9.noarch
+   16  sudo rpm -ivh setup-2.13.7-9.el9.noarch
+   17  sudo yum update
+   18  q
+   19  clear
+   20  sudo dnf upgrade
+   21  sudo dnf install
+   22  sudo dnf install nginx
+   23  sudo dnf install python3
+   24  sudo dnf install docker
+   25  clear
+   26  rpm -qa | wc -l
+   27  rpm -qa | less
+   28  rpm -qf /etc/passwd
+   29  rpm -qf /etc/shadow
+   30  rpm -ivh setup-2.13.7-9.el9.noarch
+   31  rpm -e setup-2.13.7-9.el9.noarch
+   32  clear
+   33  wget https://rpmfind.net/linux/mageia/distrib/8/aarch64/media/core/release/graphviz-2.44.1-2.mga8.aarch64.rpm
+   34  sudo yum install wget
+   35  clear
+   36  wget https://rpmfind.net/linux/mageia/distrib/8/aarch64/media/core/release/graphviz-2.44.1-2.mga8.aarch64.rpm
+-- INSERT --

@@ -1,0 +1,10 @@
+ Linux mass user creation:
+ Usually to do a task on o/s we are executing each and every command manually like ad hoc commands
+ How to automate o/s related actions or tasks
+ bin/sh-->bourn shell   
+ bin/bash --> bourn again shell
+ Shell Scripting:
+   sequence of commands with some logic
+#!/bin/bash --->the first line of the shell file
+here the # will be ignored 
+everything in linux is treated as a string   
