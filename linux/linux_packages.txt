@@ -1,0 +1,12 @@
+what is package in linux:
+    collection of various supporting files together 
+How to manage packages in linux:
+     package management means-->install,uninstall, update/upgrade, downgrade, patching
+types of packages:
+red hat package(rpm):if your o/s is redhat based
+using rpm how to install  
+   1).Need to download packages dependencies
+   2).install  dependencies
+   3).install actual package
+How to download packages:
+        
