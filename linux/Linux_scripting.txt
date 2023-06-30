@@ -8,3 +8,69 @@
 #!/bin/bash --->the first line of the shell file
 here the # will be ignored 
 everything in linux is treated as a string   
+How to execute shell scripts:
+  method1: using shell method /bin/bash scriptname
+  [ec2-user@ip-172-31-28-243 ~]$ /bin/bash hello.sh
+hello iam sudha from hyd
+this method will not ask for execution permission
+method2:Full path method
+  /home/user/scripts/first.sh
+method 3: short path method
+./first.sh
+. dot means current working directory
+we can give permission for file 
+string method:rwx
+number method :421
+chmod 777-->full permission
+chmod +x file name
+-----------------------------------------------------------------------
+when you add another shabng line after
+ #!/bin/bash
+ #!/bin/tcsh
+ if you not give shabang line also the script will execute
+because it has a root user root:x:0:0:root:/root:/bin/bash
+for some users itbis not possible like systemd-network:x:192:192:systemd Network Management:/:/usr/sbin/nologin
+Variables:
+->it is a name/lable given to a memory location
+->to hold a value untill the script is there this memory location will hold a value short period or long period of time
+Different types of Variables in shell scripting:
+1).System Variables:which means along with o/s few variables will be created
+ex:SHELL,PATH,HOME all these are generated along with o/s installation
+2)User variables:
+Administartor will create these variables
+ex:ORGNAME,VER,MARKS
+***3).Shell variables:only used by shell only
+ex:$0,$1,$2,
+How to see values of a variables:
+  -- we need to use $ with variable name
+  syntax:$<variable-name>
+How to list all the Variables in linux
+  #env
+How to give naming conventions to the variables:
+All capital letter can be used good practice.
+Start variable name with capital letter
+we an start with _ ex:_Orgname
+ending with a number is also ok hhhh909
+Invalid naming conventions :
+no spl characters otherthan _ (underscore)
+Do not start with number (86hdhhh)
+-------------------------------------------------------------------------
+How to define variables:
+methods:
+1).command line method:
+#export ORGNAME=xyz
+the lifetime of variable is the moment the session stops the varaible will dies
+2).In shell scripts:
+  ORGNAME=xyz
+  the lifespan of variable is untill the sripts runs
+3).for variable permenant storing purpose
+ Profile file  ~/.bash-Profilefile when you define your variable inside profile file so the life span of varaible did't depends on session or scripts
+ Dont use linux existig commands as variable names (ex:echo,pwd,whoami)
+ ------------------------------------------------------------------------------
+ How to destroy variable:
+  unset <variable_name>
+  unset ORGNAME
+
+   
+
+

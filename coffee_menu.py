@@ -1,0 +1,33 @@
+
+MENU={
+"espresso":{
+  "ingredents":{
+        "water":50,
+        "coffee":18
+  },
+  "cost":2.5
+},
+"latte":{
+  "ingredents":{
+        "water":50,
+        "coffee":18,
+        "milk":20
+  },
+   "cost":1.5,
+
+},
+"cappuccino":{
+    "ingredients":{
+        "water":20,
+        "coffee":30,
+        "milk":40
+    },
+ "cost":2.0
+}
+}
+profit=0
+resources={
+  "milk":300,
+   "water":200,
+   "coffee":100, 
+}
