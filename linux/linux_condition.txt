@@ -1,0 +1,206 @@
+Decision making in linux:
+condition-->expression or combination of expressions TRUE/FALSE expressions
+expression is the result we get frm differenr Different sections
+file testing
+string testing
+number testing
+logical testing
+Conditional Statements in linux:
+  1).IF-ELSE
+  2).CASE
+IF Statement:
+types of 
+1).if Statements(single condition)
+if [ condition ]; then
+   commands/Statements
+   commands/Statements
+   commands/Statements
+   commands/Statements
+fi   
+
+2). if [ condition ]; then            if condition is false
+       commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements
+    else   
+       commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements
+    fi   
+3).Check for multiple condition:
+    if [ condition1 ] then;
+       commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements
+    elif [ condition2 ] then;
+       commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements
+    elif [ Condition3 ] then;
+       commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements
+    else
+        commands/Statements
+       commands/Statements
+       commands/Statements
+       commands/Statements 
+    fi     
+   ------------------------------------------------File Expression or file testing-------------------------------------
+     -f for file is present or not
+     -d directory is present or not
+     -r for read permission
+     -w write permission
+     -x excecute permission
+     -z search for zero byte or empty file
+  file is present or not:
+    #!/bin/bash
+####To check weather the file is present or not
+if [ -f "/etc/passwd" ]; then
+  echo "File etc/passwd is present"
+fi
+#To check the read permission on the file /etc/shadow
+
+if [ -r "/etc/shadow" ]; then
+  echo "File "etc/shadow" has read permission"
+else
+  echo "You do not have read permission"
+fi
+
+NOTE: if you are executing the file with root user the file read permission is there but if you login as ec2-user the file will not provide permission
+"everything is string in shell script"
+
+COMMAND=date
+echo "$COMMAND" ---> this will evaluate the value (o/p--->date)
+echo '$COMMAND'  --->this will not evealuate the output(o/p-->$COMMAND)
+echo `$COMMAND`   ----> back tick evaluate the value of varaible(after back tick it will take this as linux command and prints the particular date)Fri Jun 30 05:30:55 UTC 2023
+----------------------------------String testing--------------------------------------------------------------
+string1 == string2 (comparison)
+string1 != string2
+write a script to detect weather who ever running the script is root user or not???
+TO KNOW THE FULL PATH OF THE USER 
+COMMAND IS :whereis whoami,which whoami
+
+#!/bin/bash
+##to detect the running user or not
+#define variable
+RUNNER=`/user/bin/whoami`
+#string expr test
+if [ "$RUNNER"  == "root" ]; then
+  echo "You are the root user"
+else
+  echo "You are a normal user: $RUNNER "
+fi
+-------------------------Number expression testing---------------------------
+working with numbers in scripting 
+-eq for equal to
+-ne for not equal to
+- gt for greather than
+-ge for greater than or equal to
+-lt for less than
+-le for less than or equal to
+Example:
+Student results:
+here wll check multiple if conditions:
+percentage of student marks
+>75--->first division
+>65 -->2nd division
+>45 -->third division
+<35-->failed
+
+#!/bin/bash
+#Student results baswed on percentage----
+#define initial percentage of the student variable
+PERC=76
+if [ $PERC gt 75 ]; then
+  echo "the student passed in first divion"
+elif [ $PERC gt 65 ]; then
+  echo "the student passed in second division"
+elif [ $PERC gt 45 ]; then
+  echo "the studnet passed in third division"
+else
+      "the student got faaaaaaaaaaaaailed"
+fi
+NOTE:Scripts will start execute from top only if the condition becomes true it will not go to next line
+--------------------------want to pass value of the variable as argument----------------
+# ./filename [number or argument]
+$0-->filename
+$1--->argument
+if you have multiple variables then it will assign as $1,$2,$3,$4 etc.....
+bydefault we can pass 9 arguments we can pass
+initial percentage of the student variable
+PERC=$1
+if [ $PERC -gt 75 ]; then
+  echo "the student passed in first divion"
+elif [ $PERC -gt 65 ]; then
+  echo "the student passed in second division"
+elif [ $PERC -gt 45 ]; then
+  echo "the studnet passed in third division"
+else
+      "the student got faaaaaaaaaaaaailed"
+fi
+
+when you pass the PERC as $1 then we can give value while execution
+---------------How to check while the executing the user is not giving the input-------------------------
+Logical testing will come under this
+AND (-a): if both conditions are then only the condition is true if any condition is false whole condition becomes false
+OR (-o ): if any condition is true the whole condition becomes true
+NOT(!):condition true if it is false reverse of condition
+#!/bin/bash
+#Student results baswed on percentage----
+#define initial percentage of the student variable
+PERC=$1
+#for logical operator
+#To check weather we are passing perc value as arg or not
+if [ ! $PERC ]; then
+  echo "Please pass percentage value as argument"
+  exit
+fi
+if [ $PERC -gt 75 ]; then
+  echo "the student passed in first divion"
+elif [ $PERC -gt 65 ]; then
+  echo "the student passed in second division"
+elif [ $PERC -gt 45 ]; then
+  echo "the studnet passed in third division"
+else
+      "the student got faaaaaaaaaaaaailed"
+fi
+-----------------------------to pass values in between some range-----------------
+#define initial percentage of the student variable
+PERC=$1
+#for logical operator
+#To check weather we are passing perc value as arg or not
+if [ ! $PERC ]; then
+  echo "Please pass percentage value as argument"
+  exit
+fi
+#To restrict user or student percentage netween 0 and 100
+#using 0r (-o) logical operator
+if ["$PERC" -gt 100 -o "$PERC" -lt 0 ]; then
+  echo "Please enter student percentage between 0 and 100 only"
+fi
+if [ $PERC -gt 75 ]; then
+  echo "the student passed in first divion"
+elif [ $PERC -gt 65 ]; then
+  echo "the student passed in second division"
+elif [ $PERC -gt 45 ]; then
+  echo "the studnet passed in third division"
+else
+      "the student got faaaaaaaaaaaaailed"
+      
+fi
+--------------------------------Scenario------------------------------------------------------
+write a shell script to create a user in linux o/s set password??
+1).Take user as command line argument
+2). Executing user or running user sufficient previliages
+3).Check if the user is already existing or not
+4).Set the password for the user
+5).Successfully created message.
+$? mark will store previous command exit status
+ exit status=0 unsuccessful
+ exit status=1 Successful 
