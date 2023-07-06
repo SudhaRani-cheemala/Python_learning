@@ -1,0 +1,93 @@
+Functions in linux:                            variable:name or label given to a memory location 
+  name or a label given to Block of code.
+  function will accept arguments
+How to define function or syntax of a function:
+function(){
+  //2 indentations  
+
+
+}
+we can write all our logics inside a functional file.
+How to write functional file??
+con1:function file doest have to be .sh extension
+con2:does't start with a shabang line
+con3: doest have execute permissions
+How to use or run a function:
+1). we have to load function file into memory.
+2). syntax source <filename>
+3).type function name in terminal
+
+#no need of .sh extension
+#no need of shabang line
+#no need of +x permissions
+
+goodmorning() {
+  echo "Hello Good Moring"
+  echo " Hai iam sudha"
+  date
+  whoami
+  mkdir hello
+}
+takingbkp(){
+  echo "taking backup of $1 directory"
+  sleep 15
+  echo "backup successfull......"
+
+}
+taking backup here $1 is an argument which we have to give after sourcing the file after 
+function name <argument>
+---------------writing a function and calling a function inside a shell script------------
+#!/bin/bash
+#defining and calling functions from the shell scripts
+#short path method
+
+functionfile
+
+#full path method
+
+/home/ec2-user/functionfile
+
+#call functions in functionfile
+
+goodmorning
+
+echo
+
+takingbkp
+
+here we are calling the functions in functionsfile into the shell file
+real path of a file can known by using the below command
+realpath <filename>
+/home/ec2-user/functionfile
+
+#!/bin/bash
+#defining and calling functions from the shell scripts
+#short path method
+
+. functionfile
+
+
+#full path method
+
+
+. /home/ec2-user/functionfile
+
+
+#call functions in functionfile
+
+goodmorning
+
+echo
+
+takingbkp
+
+goodbye(){
+  echo "that's from the scripting"
+  echo "please explore more on these topics"
+  echo "Good bye"
+}
+goodbye
+
+---------------How to remove the function file from the source------------------
+unset -f <filename>
+untill you souce the file the function will not work
