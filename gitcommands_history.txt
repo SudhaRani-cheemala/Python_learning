@@ -1,0 +1,84 @@
+ git config --global user.name csudharani37@gmail.com
+  219  git config --global user.name Sudha
+  220  git config --global user.email csudharani37@gmail.com
+  221  git config --global user.name "Sudha"
+  222  git config --global user.email "csudharani37@gmail.com"
+  223  git config --list
+  224  clear
+  225  vi path_file.sh
+  226  chmod path_file.sh
+  227  chmod 777 path_file.sh
+  228  ./path_file.sh
+  229  vi path_file.sh
+  230  ./path_file.sh
+  231  ./path_file.sh Write a shell script to check to see if the file “file_path” exists. If it does exist, display “file_path passwords are enabled.” Next, check to see if you can write to the file. If you can, display “You have permissions to edit “file_path.””If you cannot, display “You do NOT have permissions to edit “file_path
+  232  clear
+  233  ll
+  234  realpath student.sh
+  235  ./path_file.sh
+  236  ./path_file.sh /home/ec2-user/student.sh
+  237  vi path_file.sh
+  238  ./path_file.sh /home/ec2-user/student.sh
+  239  vi path_file.sh
+  240  ./path_file.sh
+  241  ./path_file.sh /home/ec2-user/student.sh
+  242  vi path_file.sh
+  243  ./path_file.sh
+  244  vi path_file.sh
+  245  ./path_file.sh
+  246  clear
+  247  git status
+  248  cd cloudbot/
+  249  git status
+  250  vim first.sh
+  251  git status
+  252  git add .
+  253  git status
+  254  git status
+  255  git rm --cashed first.sh
+  256  git rm --cached first.sh
+  257  git status
+  258  git add .
+  259  git status
+  260  git commit -m "first program"
+  261  git push
+  262  git status
+  263  git config --global user.name "Sudha"
+  264  git config --global user.email "csudharani37@gmail.com"
+  265  git config --ist
+  266  git config --list
+  267  git status
+  268  vi first.sh
+  269  git status
+  270  clear
+  271  ll
+  272  git status
+  273  git restore first.sh
+  274  git status
+  275  vi first.sh
+  276  git status
+  277  git add .
+  278  git status
+  279  git commit -m "added extra code"
+  280  git status
+  281  vi first.sh
+  282  git status
+  283  git commit -am "added line of code"
+  284  git rm first.sh
+  285  ll
+  286  git restore first.sh
+  287  ll
+  288  git log
+  289  git show  e9fbc7972d33812cb2e658996703faa9c25f222b
+  290  git diff
+  291  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b ..
+  292  clear
+  293  git log
+  294  git diff  d3e510a768e0f06399e16ce6674b4065567c0893
+  295  git diff  d3e510a768e0f06399e16ce6674b4065567c0893 ..  0e85cb2ea4a95d6b79ab6a7111fafd31de170443
+  296  git diff  d3e510a768e0f06399e16ce6674b4065567c0893..85cb2ea4a95d6b79ab6a7111fafd31de170443
+  297  clear
+  298  git log
+  299  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b.. d3e510a768e0f06399e16ce6674b4065567c0893
+  300  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b..d3e510a768e0f06399e16ce6674b4065567c0893
+  301  history

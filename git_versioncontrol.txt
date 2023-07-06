@@ -1,0 +1,70 @@
+Purpose of SCM/VCS
+SCM(Source code management)
+VCS(Version control System)
+Keep tracking the code.
+How to know which developer worked on which source code
+How to know which developer has modified source code
+Need keep track of all the changes.
+Central version control system: mo local copy,no limitations,diskful erros,lazy transfer,if it is down no developer can use this one
+Disributed version control systems:
+  mostly these are cloud based technologies
+  ex:github,bit bucket,gitlab
+  once you create your github account all developers will get the access by giving permission to the repo or anything
+  Advantages:every developer can have a local copy 
+            if github is down the developers will have local copy
+            smart transfer mechanism which means it compress the file
+ ------------------what are the file types can be used---------in Disributed version control system----------
+ it is meant for programming files
+ some supporting text files(READ ME files,pdf files)
+ ---------------what files are not suitable----------------------------
+ lot of images (jpeg,png,jpg)
+ mp3 files (s3 bucket)
+ video files
+ --------------who is actually use git or github---------------------
+ how a days who ever is involved in the project all are using git
+ --------------------Hoe to install git----------------------------
+ we can install git on all platforms
+ official download pages
+  yum install git -y
+  206  git --version
+  207  mkdir cloudbot
+  208  cd cloudbot/
+  209  cd ..
+  210  realpath cloudbot/
+  211  cd cloudbot/
+  212  git init
+  213  clear
+  214  ls -la
+  215  history
+
+  After installation the configuration will be done:
+    git config --global user.name "Sudha"
+    git config --global user.email "csudharani37@gmail.com"
+  how to list the global parameters in git
+  git config --list
+  NOTE: After git init command the respective folder will become reppository .git
+  ---------------------Created a file with some logic-----------------
+  git will track this particular file
+git commands
+  git status--->identifies new files 
+  to track it add git add . or git add <file name>
+  after git add command the all tracked files are available in 2nd stage this we can call cashe area or temporary area file will be added to this area
+  working area to staging area
+  git status(bcz file is in staging area the file will be in green in colour it is yet to be commited)
+  git commit -m "my first program"-->m for message(ready to be push into remote repository)
+  git status(exp o/p:working tree is clean)
+  git rm --cached first.sh (You can untrack a file which is tracked )
+  git restore <filename>-->can restore the modified file from staging area to working area
+   git commit -am "added line of code"--->you can add and commit both at a same time
+   if you use rm for delete a file it can be restorte form git only
+   ------------how to check what changes happed in your local repository------------
+   git log---> will give all the changes or commits history
+   git show   ----> will give the content in this particular version
+   git diff --->is for difference between latest and previous commits
+
+  git push()
+
+
+
+           
+
