@@ -14,3 +14,7 @@ addition(10,20)
 subtraction(10,20)
 multiplicatio(10,20)
 division(10,20)
+even=[]
+for i in range(0,50,2):
+    even.append(i)
+print(even)     

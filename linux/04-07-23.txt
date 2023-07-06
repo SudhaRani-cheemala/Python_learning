@@ -1,0 +1,42 @@
+script_file_name <value>
+  $0               $1
+Logical testing/logical expression in linux:
+AND (-a)
+OR(-o)
+NOT(!)
+#!/bin/bash
+#Student initial:accept perc of marks
+#define initial percentage of student in variable
+PERC=$1
+#to check weather we are passing perc value as arg or not
+if [ ! $PERC ];then
+  echo "Please provide percentage value:which is manadatory....!!!!"
+  exit
+fi
+#To restrict student percentae between 0 amd 100
+#using or (-o) logical operator
+if [ "$PERC" -gt 100 -o "$PERC" -lt 0 ]; then
+  echo "Please enter student percentage only..........!!!!"
+  exit
+fi
+if [ "$PERC" -gt 65 ]; then
+  echo "Student Results:FIRST DIV"
+elif [ "$PERC" -gt 55 ]; then
+  echo "Student Results:SECOND DIV"
+elif [ "$PERC" -gt 45 ]; then
+  echo "Student Results:THIRD DIV"
+else
+  echo "You are failed............."
+  -------------------------------------Write a shell script to create a user in linux and set the  pwd for newly created user????----------------
+  1). take the username as a command line argument (command lione argument means taking user as $1)
+  2).executing user/running user(sufficient previliges) 
+  3). Check if the user is already present or exising or not
+    if 'yes'-->present print the message
+    if 'no' --->create user
+  4).set the password for the user
+  5)successfully created message   
+$? mark will store the shell variable ad also previous command execution status.
+if exit sttaus is 0 the exucution commmand is successfully
+if exit sttaus is 1 the exucution commmand is unsuccessfully
+  
+

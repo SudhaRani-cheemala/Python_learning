@@ -1,0 +1,21 @@
+while loop:
+if condition is true it will be continus execution
+if condition is false it will be hault
+---------usin while loop craete multiple users------------
+#!/bin/bash
+#using while loop crarete multiple users
+#initialize the condition
+ANSW='Y'
+#while loop status
+while [ "$ANSW" == 'Y' ]
+do
+  echo
+  echo "Please enter the username u wish to add/create:"
+  read MYUSER  # allow input from keyboard and gets assigned to MYUSER variable
+# create the user bychecking all the conditions
+  ./user.sh $MYUSER
+#condition modifier
+  echo
+  echo "Do you want to add another  user [Y/N]? "
+  read ANSW
+done

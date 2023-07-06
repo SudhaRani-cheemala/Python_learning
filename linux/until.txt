@@ -1,0 +1,14 @@
+until loop is vice vs of while loop
+reverse of while loop
+we will enter the until loop condition is false
+exit from the loop until the condition is true
+#!/bin/bash
+#usage of until loop with increment logic
+
+NUM=1
+# let loop it using until
+until [ "$NUM" -gt 10 ]
+do
+  echo "the number is $NUM"
+  NUMB=$(expr $NUM + 1)
+done

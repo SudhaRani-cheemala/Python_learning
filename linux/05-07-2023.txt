@@ -1,0 +1,38 @@
+purpose of CASE Statement to take some decision :
+case VARNAME in 
+   (match1)
+     //condition1//
+      ;;
+   (match2)
+     //condition2//  
+       ;;
+   (match3)
+      //condition3//
+        ;;
+    (*)
+      //condition4//
+esac     
+--------------------------------case Statement program------------------
+#!/bin/bash
+#Accept o/s name frm the user provide instructions
+OSNAME=$1
+case $OSNAME in
+        ubuntu)
+           echo "You have selected $OSNAME"
+           echo "use apt-get to install packages...!!!!"
+           ;;
+        rhel)
+           echo "You have selected $OSNAME"
+           echo "use yum to install packages...!!!!"
+           ;;
+         centos)
+            echo "You have selected $OSNAME"
+            echo "ue rhel packages to install packages...!!!!"
+            ;;
+          *)
+            echo "You have selected $OSNAME"
+            echo "unknown os for me please try again....!!!"
+esac
+------------------------------------------------------------------------------------------------------------
+if you give ubuntu and give inout as Ununtu it will not take this is case sensitive
+then ubuntu|Ununtu should give

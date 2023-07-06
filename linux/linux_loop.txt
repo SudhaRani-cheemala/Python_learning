@@ -1,0 +1,91 @@
+    Repeatedly doing some task:
+    Loop Statements:
+     for
+     while
+     until
+    syntax of for loop:
+       for VAR in LIST
+       do
+         //sta1//
+         //sta2//
+       done(list of characters are utilized) after done it will exit from the group
+for loop on command line:
+  [root@ip-172-31-83-21 ec2-user]# for number in 1 2 3 4 5 6 7 8 9 10
+> do
+> echo "the number is $number"
+> done
+o/p:the number is 1
+the number is 2
+the number is 3
+the number is 4
+the number is 5
+the number is 6
+the number is 7
+the number is 8
+the number is 9
+the number is 10
+in shell everything will take as a string:
+  [root@ip-172-31-83-21 ec2-user]# for number in 1 two 3 four 5 six 7 eight 9 10
+> do
+> echo "the number is $number"
+> done
+the number is 1
+the number is two
+the number is 3
+the number is four
+the number is 5
+the number is six
+the number is 7
+the number is eight
+the number is 9
+the number is 10
+-------------how to print list of infinite numbers in given range---------------------
+for number in {1..100}
+do
+echo "the number is $number" 
+done
+o/p:
+[root@ip-172-31-83-21 ec2-user]# for number in {1..15}; do echo "the number is $number"; done
+the number is 1
+the number is 2
+the number is 3
+the number is 4
+the number is 5
+the number is 6
+the number is 7
+the number is 8
+the number is 9
+the number is 10
+the number is 11
+the number is 12
+the number is 13
+the number is 14
+the number is 15
+-----------------to create 100 files in a folder----------------------
+for i in {1..20}
+do
+touch "file$i"
+done
+o/p: it will create one folder with 20 files
+----------------create user=----------------
+for MYUSER in sudha pavani likhitha anoohhya tejaswi; do useradd "$MYUSER"; done
+--------------create a usernames text file and give cat command with for loop------------------------------
+ vi userlist.txt
+[root@ip-172-31-83-21 ec2-user]# for MYUSER in `cat userlist.txt`
+> do
+> echo "the user is $MYUSER"
+> done
+the user is pavani
+the user is likhitha
+the user is anoohhya
+the user is tejaswi
+the user is sai
+the user is nikhil
+the user is yashwanth
+[root@ip-172-31-83-21 ec2-user]#
+
+--------------
+
+
+
+       
