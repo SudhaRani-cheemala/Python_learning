@@ -69,6 +69,7 @@
   286  git restore first.sh
   287  ll
   288  git log
+       git show version
   289  git show  e9fbc7972d33812cb2e658996703faa9c25f222b
   290  git diff
   291  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b ..
@@ -79,6 +80,7 @@
   296  git diff  d3e510a768e0f06399e16ce6674b4065567c0893..85cb2ea4a95d6b79ab6a7111fafd31de170443
   297  clear
   298  git log
+  git diff version1..version2
   299  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b.. d3e510a768e0f06399e16ce6674b4065567c0893
   300  git diff  e9fbc7972d33812cb2e658996703faa9c25f222b..d3e510a768e0f06399e16ce6674b4065567c0893
   301  history
