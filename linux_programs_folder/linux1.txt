@@ -6,3 +6,36 @@ echo "directory"
 else
 echo"$FILE another file"
 ls -l $FILE
+
+-------------------------------Arguments--------------
+#!/bin/bash
+#arguments
+echo "$#"
+echo "$?"
+echo "$$"
+echo "Arguments:$@"
+echo "Arg:$*"
+for var in $*
+do
+  echo "Argumets are:$var"
+done
+~
+~
+~
+~
+here the $# will display 0
+$? is for previous command success message
+$* and $@ for multiple arguments
+$$ for process id
+ $0 to $9 (positional argumets )
+ ----------------------------system related information commands-----------
+  date-->date of system
+  466  cal-->calender will display
+  467  uptime-->show current uptime
+  468  w--->who is in online
+  469  whoami---> who logged in
+  470  df -h --->disk usage
+  471  du -sh--->disk usage of current directory
+  472  free -m - --> show free space and used meomry
+  realpath <file name>/<directory-name>
+  473  history
