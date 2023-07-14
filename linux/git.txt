@@ -46,4 +46,41 @@ ignoring the file types: .gitignore--->this is a hidden file as developer or dev
  *.docker  like this we can give syntax in gitignore file
  here every file which is .py or.txt or.docker files can be ignored but you want to exclude some particular file
  just give !filename with extension 
+ -------------------------how to ignore file starting with particluar letter----------
+in gitignore file add letter which you want to ignore like (aeiou)*.net
+---------------------how to  rename  a file in GIT--------------------------
+after commit only we can rename a file
+linux command to rename a file :mv old_filename new_filename
+in GIT --->git mv <old_filename> <new_filename>--->it will change the name and commit to the staging area only.-->if you do git status
+it will be as green colour only.
+after commit only the rename will be done.
+------------how to remove git file-------------
+git rm <filename> --->it is going to staging area untill you are commiting it the activity will not be completed.
+(shift+delete) enter--->permenantly deleted
+delete+enter--->recycle bin
+remove file using linux normal delete
+git remove means you cannot get it back
+git restore is for staging area to working area: git restore --staged .\.gitignore
+
+rm file.txt
+git status
+git checkout -- file.txt ---->checkout the file from local directory to project directory(the file is back to project directory)
+but git rm will delete the file after you commit it.
+------------------GIT RESET COMMAND----------
+if you are doing changes in working area or staging or local repository area i wanted to undo the changes
+soft
+hard
+mixed
+if your file is in working area git --soft
+if your file is in staging area git --mixed -->for both working and staging area(this is the default method a git will use)
+if your file is in repository arae git --hard---> but this will work in working/staging/repository area 
+dont use rm -rf command to delete file
+--------------------------
+in git copy is called as create a branch
+git branch-->which branch
+create a copy of a branch---->git branch <new-branch_name>
+
+
+
+
 
