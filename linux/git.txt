@@ -44,5 +44,6 @@ ignoring the file types: .gitignore--->this is a hidden file as developer or dev
  *.py
  *.txt
  *.docker  like this we can give syntax in gitignore file
- 
+ here every file which is .py or.txt or.docker files can be ignored but you want to exclude some particular file
+ just give !filename with extension 
 

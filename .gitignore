@@ -1,3 +1,5 @@
 *.net
 *.php
 *.java
+
+!one.java
