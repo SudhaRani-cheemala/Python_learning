@@ -1,0 +1,48 @@
+version control system:
+how to work with multiple files in git:
+nothing to commit, working tree clean--->which means the files are commited the local repository.
+how to filter git log information: git log --oneline(entire  information will bw given)
+bafcac5 (HEAD -> master) craeted empty file
+e9a3fe0 created
+e9fbc79 added line of code
+d3e510a added extra code
+0e85cb2 first program
+
+it is displaying 7 character commit id
+head always poits to the latest commit
+how to find the code changes based on commit of code timely bases: git log --oneline --since yyyy-mm-dd
+ git log --oneline --since 2023-07-14
+how to find the code commits before the date until
+git log --oneline --until 2023-07-05 
+  f2e5be6 linux_prohrams
+5234e2f new changes   
+fc0d520 git history   
+4a34d32 06-07-23      
+deb5332 day4_linux    
+6776b9c Python        
+aa16d2d 29-06-2023
+7695c99 Linux_day2
+2dc0808 new_linux_folder
+f708790 linux_command_2
+ef34774 day 14
+which menas until 10th we have commits.
+
+Note:want to know the commits after the particlular date use since
+:want to know the commits before the particlular date use until
+
+want to know who wrote or modified code:  git log --author "sudha" --oneline
+want to combine :git log --author "sudha" --oneline --since yyyy-mm-dd--->this can give since sudha how many commits she done
+To search huge files by author:git log --author "sudha" --oneline --grep "first.java"(usimg grep command for search)
+to understand the last 10 commit id's:git log -5(here you will get last 5 commits)
+how to differentiate between 2 days of commit:
+   between 2 range of dates:git log --since 2023-07-05 --until 2023-07-08 --oneline --author "sudha" -1(we can combine every command -1 means last change done by the author)
+   single - for integers double - for strings
+-----------------------------------------------------------------------------------------------
+Want to track .txt or.py or .java files
+if you want to ignore some files:
+ignoring the file types: .gitignore--->this is a hidden file as developer or devops engineer can craete
+ *.py
+ *.txt
+ *.docker  like this we can give syntax in gitignore file
+ 
+
