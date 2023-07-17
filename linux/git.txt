@@ -80,7 +80,62 @@ in git copy is called as create a branch
 git branch-->which branch
 create a copy of a branch---->git branch <new-branch_name>
 
+----------------------------17/07/23-------------------------------------------------
+How to resolve the merge conflicts:
+  git merge --abort --->to abort the merge but this is not always
+  whatever merge we done want to abort with the help of abort command the will be used
+2).fix the conflicts:
+     dev1,dev2--->who is correct?
+     evalute to manager
+     open the coflict file
+     the file will be implemeted 
+     upfarte the file
+     git status
+     git add .
+     git commit
+     conflict resolved
+How to rename a branch:
+  git branch --move or -m oldbranch_name new_branchname
+  can we reanme master branch??---->yes but it is not recommanded.
+How to delete a branch
+   git branch -d branchname (here d for delete)
+Can we delete master branch------> Yes we can but not recommanded.
+   git branch -D branchname (here D means forcefully it will delete the branch)          
+----------------CREATING THE REMOTE REPOSITORY-----------------------------
+   git remote
+   git remote -v
+   login into git hub accout and right side corner plus symbol is there click on it and sleect new repository
+   allow everyone give public
+   if it is a free account only one private repository will be created
+   READ ME file is av=bout a written file about project.
+   after that copy the command:
+      remote repository name is origin
+      git remote add origin https://github.com
+      in your project directory local remote area will be created.
+      working area--->staging arae-->local repository area--->local remote repository area
+      from local repository area the file will go to remote repository(git push) for uploading 
+      download the code from remote repository(fetch) git fetch (file will come to local remote area)
+      you have to merge (here the destination is master branch)-->git checkout master-->git merge remote/origin/master
+      git status
+      git push -u origin master
+      git branch -r -->remote branches will be printed
+      git fetch (whatever remote files are there that will be fetched)
+      behind means one commit behind the remote origin master
+      git merge remote/origin/master
+    Second method :
+       git pull method automatically local repository and local remote repository
+    How to pull a particluar file from remote branch??
+      git cherrypick <commit-id>
+    How to copy remote repository files for a new developer:
+        git clone <git-url>
+    How to give an access to a developer in github
+    settings--->collaborators-->add people 
+            
 
+
+
+
+      
 
 
 
