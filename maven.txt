@@ -1,0 +1,34 @@
+MAVEN:
+  all files together in every repository have may me milloins of files
+  build file will be created together of all files collection
+  we call it as artifacts
+ How to create the build file:
+     can we structure our project and support files??
+       manual process is not possible to import or download library
+       now we can manage our project we need a tool called build software/build tool
+  along with build it has to download and identify the dependencies so we can call it as project management tool/or build software
+  Ant support only java application(old one)
+  for the extension of this one java application which supports python,.net, java which is open source(MAVEN)
+  it will geerate .jar file(for pure java file)
+  for web application .war file(based on java)
+  .jsp also(for web pages)
+  for enterprise application .ear files will be created
+  What is build in MAVEN?????
+    build = compile + test + package(jar/war/ear depending on project)
+    exaample:
+      xyz.java---------compile------->xyz.class------->xyz.jar------->version1.0
+       Maven is java based tool
+       Maven is open source
+       maven is free
+       maven is java based web application
+       maven is developed by Apache(Parent)
+Prerequisites:
+    1).Check if java is installed or not(need to install): yum install java(java version required for maven)
+    2). Check for java compiler : yum install javac*
+    3).download Maven from official maven page -->tar.gz file come-->wget <url of application>
+    4).need to extract the file and copy to /opt folder
+    
+
+
+
+         
