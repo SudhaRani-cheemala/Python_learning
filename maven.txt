@@ -27,7 +27,86 @@ Prerequisites:
     2). Check for java compiler : yum install javac*
     3).download Maven from official maven page -->tar.gz file come-->wget <url of application>
     4).need to extract the file and copy to /opt folder
-    
+
+  yum install java-1.8.0-openjdk -y
+    2  yum install javac
+    3  clear
+    4  wget https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.tar.gz
+    5  ls
+    6  tar xzvf apache-maven-3.9.3-bin.tar.gz
+    7  ls
+    8  tar xzvf apache-maven-3.9.3-bin.tar.gz -C /opt
+    9  ls
+   10  ls -l /opt/
+   11  mvn --versio
+   12  en
+   13  env
+   14  ls -l /opt/
+   18  env
+   19  clear
+   20  ls -l /opt/
+   21  export M2_HOME=/opt/apache-maven-3.9.3
+   22  export PATH=$PATH:$M2_HOME/bin
+   23  env
+   24  history
+    ----------------------18/07/2023----------------------------------
+    How to structure our project:
+    How to use maven:
+        basically project structure is decided by the developing team.
+        mvn archetype:generate
+        we can generate project structure number by using maven:
+           project management activity: mvn archetype:generate(now it will go to central repository)
+           3307: remote -> za.co.absa.hyperdrive:component-archetype_2.12 (-)
+           3307 is a project structure number 
+           1: 1.0-alpha-4
+2: 1.0
+3: 1.0.1
+4: 1.3
+5: 1.4
+ tota 5 versions 
+ ->dowloading all files
+ ->including POM
+ ->asking for groupid(groupid is nothing but reverse naming conversion (com.cloudbot.www))
+ ->asking for artifact id(combination of all supporting and all programming files)
+ ->asking for sanpshot(the version is not finalised untill you give sanpshot id)
+ Finally project structure is ready.
+
+
+ .POM file (project object model):this file decides what libraries and supporting files required 
+     .
+├── pom.xml
+└── src
+    └── main
+        ├── java
+        │   └── com
+        │       └── cloudbot
+        │           └── www
+        │               └── MyPortlet.java
+        ├── jetspeed
+        │   └── web.xml
+        └── webapp
+            ├── help.jsp
+            ├── maximized.jsp
+            ├── normal.jsp
+            └── WEB-INF
+                ├── portlet.xml
+                ├── tld
+                │   └── portlet.tld
+                └── web.xml
+commnads:
+  mvn validate
+  mvn compile
+    Target folder will be craeted after successful compilation
+  mvn test(in local repository .m2 the libraries will be downloaded)
+  class file will be craeted and (that is in binary language)    
+  mvn package(package related plugins will be dowloaded from central repository into local .m2)
+ How to check the list of files in .jar file-------> jar -tvf target/cloudbot_jarproj-1.0-SNPSHOT.jar
+   by using commnad java -cp target/cloudbot_jarproj-1.0-SNPSHOT.jar com.cloudbot.www.App
+ mvn clean--->want to clean  (now the target folder will be vaished) 
+  
+
+              
+
 
 
 
