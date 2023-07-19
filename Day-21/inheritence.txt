@@ -1,0 +1,16 @@
+class Animal:
+    def __init__(self):
+        self.num_eyes=2
+    def breath(self):
+        print("inhale","exhale")
+class Fish(Animal):
+    def __init__(self):
+        # inherit all of the attributes from the Animal class 
+        super().__init__()
+    def swim(self):
+        print("swim")
+ob1=Fish()
+ob1.breath()
+ob1.swim()       
+print(ob1.num_eyes) 
+
