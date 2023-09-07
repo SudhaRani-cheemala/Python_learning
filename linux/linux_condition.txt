@@ -30,17 +30,17 @@ fi
        commands/Statements
     fi   
 3).Check for multiple condition:
-    if [ condition1 ] then;
+    if [ condition1 ]; then
        commands/Statements
        commands/Statements
        commands/Statements
        commands/Statements
-    elif [ condition2 ] then;
+    elif [ condition2 ]; then
        commands/Statements
        commands/Statements
        commands/Statements
        commands/Statements
-    elif [ Condition3 ] then;
+    elif [ Condition3 ]; then
        commands/Statements
        commands/Statements
        commands/Statements
